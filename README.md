@@ -52,41 +52,61 @@ Activate the virtual environment and navigate to the backend directory:
 ```bash
 cd foss_backend
 venv\Scripts\activate
+```
+
 Step 2: Create Superuser
 Run the following command:
 
+```bash
 python manage.py createsuperuser
+```
+
 Use the credentials below (important – frontend uses the same):
-
 Username: Fossee
-
 Password: fossee123
 
 Starting Backend Server
 After creating the superuser, start the Django development server:
 
+```bash
 python manage.py runserver
+```
+
 Backend will be available at:
 
+```bash
 http://127.0.0.1:8000/
-Web Frontend Setup (React)
-Step 1: Navigate to frontend folder
-cd foss_frontend
-Step 2: Install dependencies
-npm install
-Step 3: Start development server
-npm start
-Web application will run at:
+```
 
+## Web Frontend Setup (React)
+Step 1: Navigate to frontend folder
+```bash
+cd foss_frontend
+```
+Step 2: Install dependencies
+```bash
+npm install
+```
+Step 3: Start development server
+```bash
+npm start
+```
+Web application will run at:
+```bash
 http://localhost:3000
+```
 ⚠️ The React app automatically sends authentication headers.
 Uploading CSV without valid credentials will fail.
 
-Desktop Application Setup (PyQt)
+## Desktop Application Setup (PyQt)
 Step 1: Install required Python libraries
+```bash
 pip install pyqt5 matplotlib requests
+```
 Step 2: Run the desktop application
+```bash
 python main.py
+```
 ⚠️ The PyQt application also automatically attaches authentication headers.
 
 Authentication Notes
