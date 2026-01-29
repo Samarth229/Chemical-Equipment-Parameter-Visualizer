@@ -1,0 +1,126 @@
+/* ---------- Global ---------- */
+body {
+  background: #f5f6fa;
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- App Container ---------- */
+.app-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+/* ---------- Upload Section ---------- */
+.hint {
+  font-size: 14px;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+.toggle-btn {
+  background: #374151;
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.toggle-btn:hover {
+  background: #1f2933;
+}
+
+/* ---------- Errors ---------- */
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* ---------- Chart Section ---------- */
+canvas {
+  max-height: 420px;
+}
+
+/* ---------- History Section ---------- */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.history-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.history-row::-webkit-scrollbar-thumb {
+  background: #c7c9d1;
+  border-radius: 10px;
+}
+
+.history-card {
+  min-width: 260px;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+}
+
+.history-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* ---------- Code / JSON ---------- */
+pre {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  overflow-x: auto;
+}
+
+
