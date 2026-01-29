@@ -41,44 +41,57 @@ fossee123
 
 ---
 
-## Creating Superuser (Required)
+## Creating Superuser (Required for Authentication)
 
-While running the backend, create a Django superuser using:
+This project uses **Basic Authentication**.  
+You must create a Django superuser to access protected APIs.
+
+### Step 1: Start Backend Environment
+Activate the virtual environment and navigate to the backend directory:
+
+```bash
+cd foss_backend
+venv\Scripts\activate
+Step 2: Create Superuser
+Run the following command:
 
 python manage.py createsuperuser
-Use the same username and password mentioned above:
+Use the credentials below (important – frontend uses the same):
 
 Username: Fossee
+
 Password: fossee123
+
 Starting Backend Server
+After creating the superuser, start the Django development server:
+
 python manage.py runserver
 Backend will be available at:
 
 http://127.0.0.1:8000/
 Web Frontend Setup (React)
-Navigate to frontend folder
-
-Install dependencies
-
-Start development server
-
+Step 1: Navigate to frontend folder
+cd foss_frontend
+Step 2: Install dependencies
 npm install
+Step 3: Start development server
 npm start
-Web app runs at:
+Web application will run at:
 
 http://localhost:3000
-Desktop Application Setup (PyQt)
-Install required Python libraries
-
-Run the desktop app
-
-pip install pyqt5 matplotlib requests
-python main.py
-Notes
-Both React and PyQt applications automatically attach authentication headers.
-
+⚠️ The React app automatically sends authentication headers.
 Uploading CSV without valid credentials will fail.
 
-PDF reports can be downloaded only for authenticated users.
+Desktop Application Setup (PyQt)
+Step 1: Install required Python libraries
+pip install pyqt5 matplotlib requests
+Step 2: Run the desktop application
+python main.py
+⚠️ The PyQt application also automatically attaches authentication headers.
 
+Authentication Notes
+All CSV uploads, history access, and PDF downloads are protected.
 
+Invalid credentials will result in 401 Unauthorized.
+
+PDF reports can be downloaded only by authenticated users.
